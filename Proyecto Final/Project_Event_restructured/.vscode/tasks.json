@@ -1,0 +1,46 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Backend (7080)",
+			"type": "shell",
+			"command": "cd /d c:\\Users\\Valentina\\Desktop\\Project_Event_restructured\\backend\\Project_Event && mvnw.cmd -q -DskipTests clean package && java -Dapp.port=7080 -jar target\\event-platform-1.0.0.jar",
+			"args": [],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Run Frontend (Vite)",
+			"type": "shell",
+			"command": "cd /d c:\\Users\\Valentina\\Desktop\\Project_Event_restructured\\frontend && set VITE_API_URL=http://localhost:7080&& npm run dev",
+			"args": [],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Build Backend with Mongo",
+			"type": "shell",
+			"command": "cd /d c:\\Users\\Valentina\\Desktop\\Project_Event_restructured\\backend\\Project_Event && mvnw.cmd -DskipTests clean package",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "TODO placeholder",
+			"type": "shell",
+			"command": "echo TODO",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "dummy",
+			"type": "shell",
+			"command": "echo dummy",
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}
