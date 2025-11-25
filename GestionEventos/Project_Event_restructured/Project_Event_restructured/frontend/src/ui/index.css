@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { 
+  color-scheme: light dark;
+  --primary: 23 23 23;
+  --primary-foreground: 250 250 250;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body { 
+  @apply bg-neutral-50 text-neutral-900 antialiased;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.container { @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8; }
+.card { @apply rounded-2xl shadow-lg bg-white p-6 border border-neutral-100 transition-shadow; }
+.btn { 
+  @apply px-4 py-2 rounded-xl shadow hover:shadow-md transition-all font-medium;
+  @apply active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+.input { 
+  @apply px-4 py-2 rounded-xl border border-neutral-200 bg-white;
+  @apply focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-transparent;
+  @apply transition-all;
+}
+.title { @apply text-3xl font-bold tracking-tight; }
+
+/* Utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100 rounded;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-300 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-400;
+}
